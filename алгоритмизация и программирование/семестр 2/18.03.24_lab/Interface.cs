@@ -48,14 +48,28 @@ namespace Interface
             double a = Convert.ToDouble(Console.ReadLine());
             Console.WriteLine("Введите значение b: ");
             double b = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"Сумма элементов {a} и {b} равна {a / b}");
+            if (b != 0)
+            {
+                Console.WriteLine($"Частное элементов {a} и {b} равна {a / b}");
+            }
+            else
+            {
+                Console.WriteLine("Деление на ноль невозможно.");
+            }
             Console.WriteLine();
         }
         public void Square()
         {
             Console.WriteLine("Введите значение a: ");
             double a = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine($"Корень из {a} равен {Math.Sqrt(a)}");
+            if (a >= 0)
+            {
+                Console.WriteLine($"Корень из {a} равен {Math.Sqrt(a)}");
+            }
+            else
+            {
+                Console.WriteLine("Корень из отрицательного числа не определен.");
+            }
             Console.WriteLine();
         }
         public void Sin()
